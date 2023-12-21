@@ -9,10 +9,10 @@ long int rekursia(int n)
 		return 1;
 	if (n == 0)
 		return 0;
-	return rekursia(n - 1) + rekursia(n - 2);
+	return rekursia(n - 1) + rekursia(n - 2); // >45!!!!
 }
 
-long int dinamic_prog(int n) {
+long long int dinamic_prog(int n) {
 	int x = 1;
 	int y = 1;
 	int i;

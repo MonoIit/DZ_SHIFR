@@ -29,22 +29,7 @@ int knapSack_classic(int W, const vector<int> &wt, const vector<int> &val, int n
 	} 
 	return K[n][W]; 
 } 
-int knapSack_reduce_memory(int W, const vector<int> &wt, const vector<int> &val, int n) 
-{ 
-	int dp[W + 1]; 
-	memset(dp, 0, sizeof(dp)); 
 
-	for (int i = 1; i < n + 1; i++) { 
-		for (int w = W; w >= 0; w--) { 
-
-			if (wt[i - 1] <= w) 
-				
-				dp[w] = max(dp[w], 
-							dp[w - wt[i - 1]] + val[i - 1]); 
-		} 
-	} 
-	return dp[W]; 
-}
 int knapSack_naive(int W, const vector<int> &wt, const vector<int> &val, int n) 
 { 
   
@@ -95,7 +80,7 @@ int test_cases() {
         cout<<"weights: "<<line1<<endl;
         cout<<"values:  "<<line2<<endl;
         cout<<"max_weight:"<<W<<endl;
-        cout<<"Backpack max value:"<<knapSack_reduce_memory(W, weight, profit, n)<<endl;
+        cout<<"Backpack max value:"<<knapSack_classic(W, weight, profit, n)<<endl;
     }
 
     return 0;

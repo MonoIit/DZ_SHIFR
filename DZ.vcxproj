@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{86be8415-2bb6-42dd-a0b2-18e11baf0d97}</ProjectGuid>
-    <RootNamespace>RoshchektaevAA2208DZ</RootNamespace>
+    <ProjectGuid>{a354a330-d124-4b57-9775-4f271fcb59ba}</ProjectGuid>
+    <RootNamespace>DZ</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Roshchektaev_AA-22-08_DZ.h" />
+    <ClCompile Include="sss.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

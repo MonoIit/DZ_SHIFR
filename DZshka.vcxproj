@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{704fef58-91bb-4240-b82a-a50c0ec8c6a8}</ProjectGuid>
-    <RootNamespace>homework</RootNamespace>
+    <ProjectGuid>{e3be9e2e-5b6f-475f-8f5d-e2491fc9332b}</ProjectGuid>
+    <RootNamespace>DZshka</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="homework.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="homework.h" />
+    <ClInclude Include="LCS.h" />
+    <ClInclude Include="max_code.h" />
+    <ClInclude Include="Roshchektaev_AA-22-08_DZ.h" />
+    <ClInclude Include="rusin.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,0 +1,11 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (DZ.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  main.cpp
+C:\Users\msmir\source\repos\DZshka\DZshka\LCS.h(9,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\LCS.h(9,28): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\LCS.h(86,31): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\LCS.h(105,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\LCS.h(105,30): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\max_code.h(11,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\max_code.h(41,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\main.cpp(24,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  DZshka.vcxproj -> C:\Users\msmir\source\repos\DZshka\x64\Debug\DZshka.exe

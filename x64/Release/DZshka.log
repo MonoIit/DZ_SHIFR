@@ -1,0 +1,17 @@
+﻿  main.cpp
+C:\Users\msmir\source\repos\DZshka\DZshka\LCS.h(9,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\LCS.h(9,28): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\LCS.h(86,31): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\LCS.h(105,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\LCS.h(105,30): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\Roshchektaev_AA-22-08_DZ.h(48,20): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\max_code.h(11,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\max_code.h(41,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\main.cpp(24,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\msmir\source\repos\DZshka\DZshka\main.cpp(99,24): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+  Создание кода
+  161 of 300 functions (53.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    25 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  DZshka.vcxproj -> C:\Users\msmir\source\repos\DZshka\x64\Release\DZshka.exe
