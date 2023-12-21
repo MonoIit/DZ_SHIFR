@@ -3,14 +3,14 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
-
+#include <string>
 
 using namespace std;
 
 
 int max(int a, int b) { return (a > b) ? a : b; } 
 
-int knapSack_classic(int W, const vector<int> &wt, const vector<int> &val, int n) 
+int knapSack_classic(int W, const vector<int> &weights, const vector<int> &val, int n) 
 { 
 	int i, w; 
 	vector<vector<int> > K(n + 1, vector<int>(W + 1)); 
@@ -19,9 +19,9 @@ int knapSack_classic(int W, const vector<int> &wt, const vector<int> &val, int n
 		for (w = 0; w <= W; w++) { 
 			if (i == 0 || w == 0) 
 				K[i][w] = 0; 
-			else if (wt[i - 1] <= w) 
+			else if (weights[i - 1] <= w) 
 				K[i][w] = max(val[i - 1] 
-								+ K[i - 1][w - wt[i - 1]], 
+								+ K[i - 1][w - weights[i - 1]], 
 							K[i - 1][w]); 
 			else
 				K[i][w] = K[i - 1][w]; 
@@ -29,41 +29,26 @@ int knapSack_classic(int W, const vector<int> &wt, const vector<int> &val, int n
 	} 
 	return K[n][W]; 
 } 
-int knapSack_reduce_memory(int W, const vector<int> &wt, const vector<int> &val, int n) 
-{ 
-	int dp[W + 1]; 
-	memset(dp, 0, sizeof(dp)); 
-
-	for (int i = 1; i < n + 1; i++) { 
-		for (int w = W; w >= 0; w--) { 
-
-			if (wt[i - 1] <= w) 
-				
-				dp[w] = max(dp[w], 
-							dp[w - wt[i - 1]] + val[i - 1]); 
-		} 
-	} 
-	return dp[W]; 
-}
-int knapSack_naive(int W, const vector<int> &wt, const vector<int> &val, int n) 
+int knapSack_naive(int W, const vector<int> &weights, const vector<int> &val, int n) 
 { 
   
-    // Base Case 
+ 
     if (n == 0 || W == 0) 
         return 0; 
   
-    if (wt[n - 1] > W) 
-        return knapSack_naive(W, wt, val, n - 1); 
+    if (weights[n - 1] > W) 
+        return knapSack_naive(W, weights, val, n - 1); 
 
     else
-        return max( 
-            val[n - 1] 
-                + knapSack_naive(W - wt[n - 1], wt, val, n - 1), 
-            knapSack_naive(W, wt, val, n - 1)); 
+        return max(val[n - 1] + knapSack_naive(W - weights[n - 1], weights, val, n - 1), 
+        knapSack_naive(W, weights, val, n - 1)); 
 } 
 
 
-int test_cases() {
+int check_results() {
+    cout<<"Введите 0 для проверки наивного решения и 1 для проверки динамического решения:"<<endl;
+    int mode;
+    cin>>mode;
     ifstream f("knapsack_tests.txt");
     if (!f) {
         cerr << "Ошибка открытия файла на загрузку " << endl;
@@ -95,7 +80,12 @@ int test_cases() {
         cout<<"weights: "<<line1<<endl;
         cout<<"values:  "<<line2<<endl;
         cout<<"max_weight:"<<W<<endl;
-        cout<<"Backpack max value:"<<knapSack_reduce_memory(W, weight, profit, n)<<endl;
+        if (mode){
+        cout<<"Backpack max value by dinamic method:"<<knapSack_classic(W, weight, profit, n)<<endl;
+        }
+        else{
+            cout<<"Backpack max value by naive method:"<<knapSack_naive(W, weight, profit, n)<<endl;
+        }
     }
 
     return 0;
