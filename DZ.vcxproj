@@ -18,11 +18,21 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="homework.h" />
+    <ClInclude Include="LCS.h" />
+    <ClInclude Include="max_code.h" />
+    <ClInclude Include="Roshchektaev_AA-22-08_DZ.h" />
+    <ClInclude Include="rusin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a354a330-d124-4b57-9775-4f271fcb59ba}</ProjectGuid>
-    <RootNamespace>DZ</RootNamespace>
+    <ProjectGuid>{10c81350-9246-4596-8d46-002f3b079d97}</ProjectGuid>
+    <RootNamespace>dz</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -126,9 +136,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="sss.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
